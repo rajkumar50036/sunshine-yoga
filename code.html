@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sunshine Yoga | Enlightened Wellness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e1e1f5",
+                        "primary-fixed": "#e4e2de",
+                        "on-primary-fixed-variant": "#474744",
+                        "on-secondary-fixed": "#141e17",
+                        "surface-variant": "#e4e4cc",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#303221",
+                        "tertiary-container": "#fdfaff",
+                        "on-background": "#1b1d0e",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#191b29",
+                        "on-tertiary-fixed-variant": "#444655",
+                        "surface-container-low": "#f5f5dc",
+                        "error-container": "#ffdad6",
+                        "background": "#fbfbe2",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f2f2d9",
+                        "surface-dim": "#dbdcc3",
+                        "surface-tint": "#5e5e5c",
+                        "on-primary-container": "#747471",
+                        "surface-container-highest": "#e4e4cc",
+                        "inverse-primary": "#c8c6c3",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fbfbe2",
+                        "primary-fixed-dim": "#c8c6c3",
+                        "primary-container": "#fdfbf7",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#1b1c1a",
+                        "tertiary": "#5c5d6e",
+                        "surface-container-high": "#eaead1",
+                        "outline-variant": "#c6c7c0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#efefd7",
+                        "on-secondary-container": "#5b655d",
+                        "secondary": "#576159",
+                        "on-secondary-fixed-variant": "#3f4941",
+                        "tertiary-fixed-dim": "#c5c5d8",
+                        "outline": "#767872",
+                        "secondary-fixed": "#dae5db",
+                        "secondary-fixed-dim": "#bec9bf",
+                        "primary": "#5e5e5c",
+                        "on-tertiary-container": "#717283",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#d8e3d8",
+                        "on-surface": "#1b1d0e",
+                        "on-surface-variant": "#454742"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "section-padding": "120px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .cinematic-glow {
+            box-shadow: 0 0 40px rgba(230, 230, 250, 0.4);
+        }
+        .gold-pill {
+            background: linear-gradient(135deg, #FFD700 0%, #FFF4B0 100%);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed">
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-white/40 backdrop-blur-lg dark:bg-inverse-surface/40 shadow-sm border-b border-white/20">
+<div class="font-headline-sm text-headline-sm font-bold text-secondary dark:text-secondary-fixed">Sunshine Yoga</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary font-body-md text-body-md transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Live Classes</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Meditation</a>
+<a class="text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Blog</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-container rounded-full transition-all">search</button>
+<button class="material-symbols-outlined text-primary p-2 hover:bg-surface-container rounded-full transition-all">account_circle</button>
+<button class="gold-pill text-on-surface font-label-md px-6 py-2 rounded-full transition-all active:scale-95">Join Now</button>
+</div>
+</nav>
+<main>
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Sunshine Yoga Hero Background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ui_O7EzsG95VSw0A-Gr0L4I-ockHbWDcP1eMTOe5DDQfa0QxFQ7afi32BkIWtWfLlMnOGZnKLjPfaIAzDtEDbkSfO_os-JuhM7g7erH3-7ArkvaUGrL6J2xI5r5AosD6ob9O61R9PCtO5Vx-zokQT8VJsHK4xBvtPDyg77iLljilwFNViLWZLYhIISVXfIuXoj834azomQU9OxXLqZg1Ez5pD-XMdiKXJ74qS9blGe9-UjjHoiKoVfx4pdz3OWb-NBcI3WunWJh1Q"/>
+<div class="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-background"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-margin-mobile">
+<div class="inline-block px-4 py-1 mb-6 glass-card rounded-full border border-white/40">
+<span class="font-label-md text-primary tracking-widest uppercase">Ancient Wisdom Meets Tech</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-8xl mb-8 text-on-surface drop-shadow-sm">Illuminate Your Inner Path</h1>
+<p class="font-body-lg text-body-lg mb-12 text-on-surface-variant max-w-2xl mx-auto">Premium virtual yoga sanctuary guided by Sunita Sharma. Experience cinematic wellness from the comfort of your home.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="gold-pill text-on-surface font-label-md px-10 py-4 rounded-full text-lg shadow-xl hover:opacity-90 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined" data-weight="fill">play_circle</span>
+                        Join Live Class
+                    </button>
+<button class="glass-card text-on-surface font-label-md px-10 py-4 rounded-full border border-secondary/20 hover:bg-white/60 transition-all">
+                        Explore Programs
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce text-secondary opacity-50">
+<span class="font-label-md mb-2">Scroll to discover</span>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</section>
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-container/30 rounded-full blur-3xl"></div>
+<img alt="Sunita Sharma" class="w-full h-[600px] object-cover rounded-[40px] cinematic-glow shadow-2xl relative z-10" data-alt="A professional portrait of Sunita Sharma, a serene yoga instructor with a gentle smile, wearing high-quality pastel green yoga attire. She is sitting in a meditative posture in a bright, minimalist studio filled with soft morning light and lush green indoor plants. The photography is cinematic and high-end, reflecting a premium SaaS wellness brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdx0qitr6YvHTqmlFJrMZcY1wgujXkdvvSK8UeSz281h4EWsC8u_QvYw-CkWo88Shn4KKKCKVCceAKhv8qrcGIRFqZhjaLo8yszgLVnxxdBV5d6ZLfxm1a79Ir5sVwAGQ18pT6atEM54CRZpsRG0t_ns0coThhkcVuuPWpa3YAB0Z01PvPKMNNEf4ANTDBNkQW2TpDQIwo08_B3OiIrE7mCTQSprdVqckuOELTUzaHvjMjQftJ0-73rbPNUESAyaoZjnUDD-_R2YA"/>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6 text-secondary">Meet Your Trainer</h2>
+<h3 class="font-headline-sm text-headline-sm mb-4 text-on-surface">Sunita Sharma</h3>
+<div class="w-16 h-1 bg-secondary-fixed mb-8 rounded-full"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        With over 15 years of dedicated practice across the Himalayas and global wellness retreats, Sunita brings a unique fusion of traditional Hatha yoga and modern physiological science. 
+                        Her mission is to democratize elite-level wellness through Sunshine Yoga, creating a space where technology serves as a bridge to tranquility.
+                    </p>
+<div class="grid grid-cols-2 gap-8 mb-10">
+<div>
+<span class="block font-headline-sm text-secondary">15K+</span>
+<span class="font-label-md text-on-surface-variant">Global Students</span>
+</div>
+<div>
+<span class="block font-headline-sm text-secondary">500+</span>
+<span class="font-label-md text-on-surface-variant">Guided Hours</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-3 text-secondary font-label-md border-b-2 border-secondary-fixed pb-1 hover:border-secondary transition-all" href="https://wa.me/918919163172" target="_blank">
+                        Chat with Sunita on WhatsApp
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Live &amp; On-Demand</h2>
+<p class="font-body-lg text-on-surface-variant">Tailored journeys for every level of consciousness.</p>
+</div>
+<div class="max-w-container-max mx-auto grid md:grid-cols-3 gap-gutter">
+<div class="glass-card p-8 rounded-[32px] group hover:bg-white transition-all duration-500 hover:-translate-y-2">
+<div class="w-16 h-16 bg-secondary-container rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl" data-weight="fill">self_improvement</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-4">Live Yoga Sessions</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Real-time interaction and personalized adjustments in our signature Vinyasa and Hatha flows.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                            Daily 7 AM &amp; 6 PM IST
+                        </li>
+<li class="flex items-center gap-2 text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+                            Limited Class Sizes
+                        </li>
+</ul>
+<button class="w-full py-3 rounded-full border border-secondary/20 font-label-md text-secondary hover:bg-secondary hover:text-white transition-all">View Schedule</button>
+</div>
+<div class="glass-card p-8 rounded-[32px] group hover:bg-white transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+<div class="absolute top-4 right-4 bg-secondary-fixed px-3 py-1 rounded-full text-[10px] font-bold text-secondary uppercase tracking-tighter">Most Serene</div>
+<div class="w-16 h-16 bg-tertiary-container rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-weight="fill">cloud</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-4">Meditation Mastery</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Guided transcendental journeys to quiet the mind and harmonize your inner frequencies.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-tertiary text-sm">check_circle</span>
+                            Sleep Better Series
+                        </li>
+<li class="flex items-center gap-2 text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-tertiary text-sm">check_circle</span>
+                            Morning Mindfulness
+                        </li>
+</ul>
+<button class="w-full py-3 rounded-full border border-tertiary/20 font-label-md text-tertiary hover:bg-tertiary hover:text-white transition-all">Start Now</button>
+</div>
+<div class="glass-card p-8 rounded-[32px] group hover:bg-white transition-all duration-500 hover:-translate-y-2">
+<div class="w-16 h-16 bg-surface-container rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-weight="fill">air</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm mb-4">Pranayama Breathwork</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Harness the power of breath to energize your cellular health and vitalize your nervous system.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            Breath Anatomy Insights
+                        </li>
+<li class="flex items-center gap-2 text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                            Advanced Techniques
+                        </li>
+</ul>
+<button class="w-full py-3 rounded-full border border-primary/20 font-label-md text-primary hover:bg-primary hover:text-white transition-all">Explore Breath</button>
+</div>
+</div>
+</section>
+<section class="py-section-padding bg-surface-container">
+<div class="max-w-container-max mx-auto px-margin-mobile">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Trusted by Thousands</h2>
+<p class="font-body-lg text-on-surface-variant">Real stories from our global yoga community.</p>
+</div>
+<div class="columns-1 md:columns-3 gap-6 space-y-6">
+<div class="break-inside-avoid p-8 glass-card rounded-2xl shadow-sm border-white/40">
+<div class="flex text-gold-pill mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-on-surface mb-6">"Sunshine Yoga transformed my work-from-home routine. Sunita's morning flows are the best way to start the day with clarity and energy."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed"></div>
+<div>
+<p class="font-label-md text-on-surface">Elena Rodriguez</p>
+<p class="text-xs text-on-surface-variant">Software Architect</p>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid p-8 glass-card rounded-2xl shadow-sm border-white/40">
+<div class="flex text-gold-pill mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-on-surface mb-6">"The meditation series is world-class. It feels as if I am in a professional retreat in the Himalayas. Truly a premium experience."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed"></div>
+<div>
+<p class="font-label-md text-on-surface">Mark J.</p>
+<p class="text-xs text-on-surface-variant">Creative Director</p>
+</div>
+</div>
+</div>
+<div class="break-inside-avoid p-8 glass-card rounded-2xl shadow-sm border-white/40">
+<p class="font-body-md italic text-on-surface mb-6">"I never thought virtual breathwork could be this powerful. The platform's clarity and Sunita's guidance are unmatched."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-fixed"></div>
+<div>
+<p class="font-label-md text-on-surface">Sushma K.</p>
+<p class="text-xs text-on-surface-variant">Wellness Consultant</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-padding px-margin-mobile overflow-hidden">
+<div class="max-w-container-max mx-auto bg-secondary-container/40 rounded-[64px] p-12 md:p-24 flex flex-col md:flex-row items-center gap-16 relative">
+<div class="md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Your Sanctuary in Your Pocket</h2>
+<p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed">Download the Sunshine Yoga mobile app for seamless access to live classes, offline meditation library, and personalized progress tracking. Available on iOS and Android.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-on-surface text-surface py-3 px-8 rounded-2xl flex items-center gap-3 transition-all hover:opacity-90">
+<span class="material-symbols-outlined">ios</span>
+<div class="text-left">
+<p class="text-[10px] leading-none uppercase">Download on the</p>
+<p class="font-bold leading-none">App Store</p>
+</div>
+</button>
+<button class="bg-on-surface text-surface py-3 px-8 rounded-2xl flex items-center gap-3 transition-all hover:opacity-90">
+<span class="material-symbols-outlined">play_arrow</span>
+<div class="text-left">
+<p class="text-[10px] leading-none uppercase">Get it on</p>
+<p class="font-bold leading-none">Google Play</p>
+</div>
+</button>
+</div>
+</div>
+<div class="md:w-1/2 relative">
+<img alt="App Preview" class="w-full max-w-sm mx-auto cinematic-glow rounded-[48px] border-[12px] border-on-surface shadow-2xl rotate-6" data-alt="A high-end smartphone mockup displaying a beautiful yoga app interface with a glassmorphic design. The screen shows a live class countdown and serene nature photography backgrounds. The phone is floating against a soft cream backdrop with cinematic shadows, embodying a modern SaaS and wellness luxury brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi444wpbkRYdHBNXb3bOcjPVL_UdAQxBTs8XNEbZuGAZmkl-vrARu4VGPQn2IgMaNlGBI0EjDdjRua_RS1_XJDwfsoclKMWoSYNmY9b8VHTiWkImtmPYX7x_jF3e7bKRxlkjj-sQoNQaM_3gtrM3xOHOAtZ8nL6mFdRVkBZD1g0HX6FfmDy_HxYiVuxQksSWu8U4CapGpQH9emP0Z1Z3Tb3pYHkB0ZasO5zTTfbK9yjPd2VuGOIyP2zLt-9q6pCxE0txwYgZ-6OG8"/>
+<div class="absolute -bottom-10 -right-10 bg-white p-6 rounded-[24px] shadow-lg glass-card md:flex items-center gap-4 hidden">
+<div class="p-2 bg-secondary-fixed rounded-xl">
+<span class="material-symbols-outlined text-secondary">notifications_active</span>
+</div>
+<div>
+<p class="font-bold text-sm">Morning Class</p>
+<p class="text-xs text-on-surface-variant">Starts in 15 mins</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Wellness Journal</h2>
+<p class="font-body-lg text-on-surface-variant">Insights for a mindful life.</p>
+</div>
+<button class="hidden md:block font-label-md text-secondary border-b-2 border-secondary-fixed pb-1 hover:border-secondary transition-all">View All Articles</button>
+</div>
+<div class="max-w-container-max mx-auto grid md:grid-cols-3 gap-gutter">
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-[32px] mb-6">
+<img alt="Yoga Blog" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close-up artistic photography of a person's hands in a mudra position during meditation, surrounded by soft glowing sunlight and subtle smoke from incense. The image has a warm, cinematic golden hour glow with deep soft shadows and a high-end editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv9vXd98Ww4lTWXL4pfB-JFx_7MlA0RpBCW2x38wbcLxTEKxCFg67RDv0Lj2QZXO53fY2syXcbwYVCbmK4ONkeCEVBGEjWmmGO_X-BOKBJYa9-_EnKBoCX9yeCG_Gj3_xmf0G7BR2NApGA7nU4FExAlARyj1zr85asJy0O-hXeZ7rGF9UKl4XFhgDPwWkRT8RNIaj78x7fsKUcFaJJS9o_4RyoI-V8mf6EEAnZHZr4OvpgJBHIi3NSX1W-rMl-RkYKyhFcuIUUNnQ"/>
+</div>
+<p class="font-label-md text-secondary mb-3">MINDFULNESS</p>
+<h5 class="font-headline-sm text-headline-sm mb-4 group-hover:text-secondary transition-colors">The Art of Silent Presence</h5>
+<p class="font-body-md text-on-surface-variant line-clamp-2">How deep silence can rewire your nervous system for peak productivity and mental peace...</p>
+</div>
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-[32px] mb-6">
+<img alt="Meditation Blog" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An ethereal scene of a person practicing yoga on a wooden deck overlooking a serene misty lake at dawn. The colors are muted pastel greens and soft creams. The composition is wide and editorial, showcasing breathability and luxury tranquility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc9purBhoOf5oYDPaX673ofQYkShV9un7Z3URZy3lLPLP5wnqAHvp7EiKwUcWYdN7KbxUOBqLy32UpaPa2CJHuvfp9fxkjIZVcDu5R_2wbwOccrXvbb2F5O1eMHbtptc8a_0x6vrqtvHZ1GaspPpRb2tJFC--pTz48NAHSj8HnaDx9UMPHtZ2Hre7gymadVvpxedND6ll77XUBZRc69ZjtDo0iZBNC4YRkXjEXbwJN__PlZxgg7U6Czjo7jNSQywyF5L_v3iI5jOM"/>
+</div>
+<p class="font-label-md text-secondary mb-3">NUTRITION</p>
+<h5 class="font-headline-sm text-headline-sm mb-4 group-hover:text-secondary transition-colors">Foods that Fuel Flexibilty</h5>
+<p class="font-body-md text-on-surface-variant line-clamp-2">Discover the ancient Ayurvedic diet secrets that support connective tissue health and mobility...</p>
+</div>
+<div class="group cursor-pointer">
+<div class="overflow-hidden rounded-[32px] mb-6">
+<img alt="Lifestyle Blog" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A minimalist still life featuring a high-quality yoga mat, a glass of water with lemon, and a single white lily in a ceramic vase. The lighting is soft and environmental, creating a calm and prestigious atmosphere for a wellness blog header." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0VFy5J8QrNwr14PnJ7iXBPEoL0wI-c22Ba7dH2U5fBZOzJmUaLqYN_NW0ycEmgk8Z6lQXfoKJuhA1-ymgz3_9ndYd5kp7OHnzrtFr3BtVgf9MV6xIAilmBynPYM6g6E8A5toFJNI7qJLG9Tk3vlEQ3GxtAB0z6wp3ONMRJpN0Cn7sJRPYZgB5L4ZfQvQmv6viWhb1nvsvUZN86jJUWpWM0eK3kmaz6pJOafr-YtB2qyihdGjKjsmAuImhXmfTrTVSdc42wHlR6AA"/>
+</div>
+<p class="font-label-md text-secondary mb-3">PRACTICE</p>
+<h5 class="font-headline-sm text-headline-sm mb-4 group-hover:text-secondary transition-colors">Morning Rituals for Clarity</h5>
+<p class="font-body-md text-on-surface-variant line-clamp-2">Five simple movements to wake up your spine and activate your energy centers every morning...</p>
+</div>
+</div>
+</section>
+<section class="py-section-padding px-margin-mobile">
+<div class="max-w-4xl mx-auto glass-card rounded-[48px] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-secondary-container/20 to-transparent pointer-events-none"></div>
+<h2 class="font-headline-lg text-headline-lg mb-6 text-on-surface">Ready to start your journey?</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">Connect with us instantly for personalized recommendations or to book a trial session.</p>
+<a class="inline-flex items-center gap-4 bg-[#25D366] text-white font-headline-sm px-12 py-5 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all" href="https://wa.me/918919163172" target="_blank">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                    WhatsApp +91 8919163172
+                </a>
+</div>
+</section>
+</main>
+<footer class="w-full py-base md:py-margin-desktop px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container dark:bg-surface-dim">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-headline-sm text-headline-sm text-secondary dark:text-secondary-fixed-dim">Sunshine Yoga</div>
+<p class="font-body-md text-body-md text-on-secondary-container dark:text-on-secondary-fixed-variant">© 2024 Sunshine Yoga. Guided by Sunita Sharma.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 text-on-secondary-container">
+<a class="font-body-md text-body-md hover:underline decoration-secondary transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md hover:underline decoration-secondary transition-all" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md hover:underline decoration-secondary transition-all" href="https://wa.me/918919163172">WhatsApp: +91 8919163172</a>
+<a class="font-body-md text-body-md hover:underline decoration-secondary transition-all" href="#">Contact Us</a>
+</div>
+<div class="flex gap-4">
+<button class="material-symbols-outlined p-2 text-secondary hover:bg-white rounded-full transition-all">public</button>
+<button class="material-symbols-outlined p-2 text-secondary hover:bg-white rounded-full transition-all">diversity_1</button>
+<button class="material-symbols-outlined p-2 text-secondary hover:bg-white rounded-full transition-all">energy_program</button>
+</div>
+</footer>
+</body></html>
